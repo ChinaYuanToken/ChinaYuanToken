@@ -451,6 +451,7 @@ Contact start
 			if (isNaN(nasValue)){
 				alert("您填入的数额不正确，请检查！")
 			} else {
+				var nasValue = nasValue * 1e18
 				console.log(nasValue)
 				var value = 0;
 				var to = contractAddress;
@@ -480,7 +481,7 @@ Contact start
 			console.log(respObject)
 			if (respObject.status == 1){
 				clearInterval(intervalQuery);
-				newWindow.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>
+				newWindow.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>
 				<div class="sub-bn form-group">
 					<div class="col-sm-6">
 						<form>
@@ -489,11 +490,11 @@ Contact start
 					</div>
 					<div class="col-sm-6">
 						<form>
-						<button class="subbtn">留在本页</button>
+						<button class="subbtn" onclick="location.reload()">留在本页</button>
 						</form>
 					</div>
 				</div>`
-				newWindow1.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>
+				newWindow1.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>
 				<div class="sub-bn form-group">
 					<div class="col-sm-6">
 						<form>
@@ -502,7 +503,7 @@ Contact start
 					</div>
 					<div class="col-sm-6">
 						<form>
-						<button class="subbtn">留在本页</button>
+						<button class="subbtn" onclick="location.reload()">留在本页</button>
 						</form>
 					</div>
 				</div>`
