@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CNYT</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- Fonts -->
+<!-- Source Sans Pro -->
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+<!-- CSS -->
+
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<!-- Bootstrap CDN -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/themefisher-fonts.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/style.css">
+<link href="css/style.1.css" rel='stylesheet' type='text/css'/>
+<!-- Responsive Stylesheet -->
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body id="body", onload="search();">
+
+<div id="preloader">
+	<div class="book">
+	  <div class="book__page"></div>
+	  <div class="book__page"></div>
+	  <div class="book__page"></div>
+	</div>
+</div>
+
+<!-- 
+Header start
+==================== -->
+<div class="container">
+	<nav class="navbar navbar-fixed-top  navigation " id="top-nav">
+		<a class="navbar-brand" href="#">
+			<img src="images/logo.png" alt="">
+			<!-- <a class="nav-link" href="#contact">CONTACT</a> -->
+		</a>
+
+	  <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+		  <i class="tf-ion-android-menu"></i>
+	  </button>
+	  <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+		<ul class="nav navbar-nav menu float-lg-right" id="top-nav">
+		  <li class="nav-item active">
+			<a class="nav-link" href="#">主页</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#about">使用说明</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#service">应用场景</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#contact">联系我们</a>
+		  </li>
+		</ul>
+	  </div>
+	</nav>
+</div>
+
+
+<section class="hero-area bg-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="block">
+					<h1 class="wow fadeInDown" data-wow-delay="0.3s" data-wow-duration=".2s">稳定货币CNYT</h1>
+					<p class="wow fadeInDown" data-wow-delay="0.5s" data-wow-duration=".5s">
+						CNYT是基于星云NRC20协议的稳定数字货币。1CNYT等价于1元人民币。
+						您可以通过NAS兑换相应价格的CNYT，也可以使用手中的CNYT来兑换相应价格的NAS。CNYT与NAS的兑换比例每小时更新，
+						NAS价格以星云官方<a href="https://explorer.nebulas.io/" style="color:#1bafb4">区块链浏览器</a>显示的价格为准。
+					</p>
+					<div class="wow fadeInDown" data-wow-delay="0.7s" data-wow-duration=".7s">
+						<a class="btn btn-home" href="#exchange" role="button">NAS兑换CNYT</a>
+						<a class="btn btn-home" href="#exchange" role="button">CNYT兑换NAS</a>
+						<a class="btn btn-home" href="#about" role="button">免费领取1CNYT</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 wow zoomIn">
+				<div class="block">
+					<div class="counter text-center">
+						<ul id="countdown_dashboard">
+							<li>
+								<div class="dash days_dash">
+									<div class="digit" id="ratio"></div>
+									<span class="dash_title">CNYT/每NAS</span>
+								</div>
+							</li>
+							<li>
+								<div class="dash hours_dash">
+									<div class="digit" id="reRatio"></div>
+									<span class="dash_title">NAS/每CNYT</span>
+								</div>
+							</li>
+							<li>
+								<div class="dash minutes_dash">
+									<div class="digit" id="nasCount"></div>
+									<span class="dash_title">已兑入NAS数量</span>
+								</div>
+							</li>
+							<li>
+								<div class="dash seconds_dash">
+									<div class="digit" id="cnytCount"></div>
+									<span class="dash_title">已兑出CNYT数量</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!-- .row close -->
+	</div><!-- .container close -->
+</section><!-- header close -->
+
+
+
+<!-- 
+About start
+==================== -->
+<section  class="section about bg-gray" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7 col-sm-12 wow fadeInLeft">
+				<div class="content">
+					<div class="sub-heading">
+						<h3>使用帮助</h3>
+					</div>
+					<p>1.CNYT是星云链上的NRC20协议代币，因此进行兑换操作需要使用星云浏览器插件</p>
+					<p>2.CNYT与NAS的兑换比例每小时更新一次，1NAS兑换CNYT数量为官方区块链浏览器展示的美元价格乘上美元汇率6.4</p>
+					<p>3.官方钱包目前还不支持代币查询，推荐使用获奖作品星云代币钱包进行CNYT的查询和转账交易，本代币合约地址为:n1MTaCQAnXazrnnawz3GVBC1KNcC7RUGRrg.</p>
+					
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+				<div class="about-slider">
+					<img src="images/about/1.jpg" alt="">
+					<img src="images/about/2.jpg" alt="">
+					<img src="images/about/3.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</section><!-- #about close -->
+<!-- 
+About start
+==================== -->
+
+<!-- 
+Service start
+==================== -->
+<section id="service" class="service section">
+	<div class="container">
+		<div class="row">
+			<div class="heading wow fadeInUp">
+				<h2>应用场景</h2>
+				<p>稳定数字货币可以应用于各种交易场景，使交易双方在享受数字货币交易带来的优势的同时，降低因数字货币价格波动导致的损失</p>
+			</div>
+			<div class="col-sm-6 col-md-4 wow fadeInLeft">
+				<div class="block">
+					<i class="tf-strategy"></i>   
+					<h3>线下商店</h3>
+					<p>目前，几乎没有线下商店接受数字货币支付，就是因为数字货币价格波动较大，会使商家蒙受亏损风险。
+					有了CNYT，商家不用再担心这个致命的问题，从而可以将数字货币推广到线下交易。</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.3s">
+				<div class="block">
+					<i class="tf-circle-compass"></i>
+					<h3>链上商城</h3>
+					<p>CNYT也可应用于各种基于星云链开发的链上商城，卖家可以在商城中接受CNYT作为支付手段，能够避免因为NAS价格变化导致的定价过高或过低，
+						从而将商品和线下的价格保持一致。</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.6s">
+				<div class="block">
+					<i class="tf-anchor2"></i>
+					<h3>会员体系</h3>
+					<p>CNYT还可应用于各种会员体系，消费者和商家之间使用CNYT作为会员充值，既可以保证商家的利益，还可以通过智能合约对CNYT的提取做限制，从而避免商家跑路，保证了消费者权益。</p>
+				</div>
+			</div>
+			<!-- <div class="col-sm-6 col-md-6 wow fadeInLeft" data-wow-delay="0.9s">
+				<div class="block">
+					<i class="tf-globe"></i>
+					<h3>Fully SEO Optimized</h3>
+					<p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div> -->
+			<!-- <div class="col-sm-6 col-md-3 wow fadeInLeft">
+				<div class="block">
+					<i class="tf-strategy"></i>   
+					<h3>Fully Responsive</h3>
+					<p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
+				<div class="block">
+					<i class="tf-circle-compass"></i>
+					<h3>Speed Optimized</h3>
+					<p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.6s">
+				<div class="block">
+					<i class="tf-anchor2"></i>
+					<h3>Tons of Feature</h3>
+					<p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="0.9s">
+				<div class="block">
+					<i class="tf-globe"></i>
+					<h3>Cloud Option</h3>
+					<p>Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+				</div>
+			</div> -->
+		</div>
+	</div><!-- .container close -->
+</section><!-- #service close -->
+
+<section id="exchange" class="call-to-action section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 wow text-center">
+				<div class="block">
+					<h2>请输入要兑换的金额</h2>
+					<p>如果您想使用NAS兑换CNYT，您需要输入您要兑换的NAS的数量，如果您想要使用CNYT兑换NAS，请输入您想要兑换的CNYT的数量</p>
+					<div class="col-lg-6 offset-lg-3">
+						<div class="input-group">
+						  <input id="outCNYT" type="text" class="form-control" placeholder="请输入您要兑换的NAS数量">
+						  <span class="input-group-btn">
+							<button class="btn btn-default btn-subscription" type="button", onclick="getCNYT();">NAS兑换CNYT</button>
+						  </span>
+						</div>
+						<div class="input-group">
+							<input id="inNAS" type="text" class="form-control" placeholder="请输入您要兑换的CNYT数量">
+							<span class="input-group-btn">
+								<button class="btn btn-default btn-subscription" type="button", onclick="getNAS();">CNYT兑换NAS</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- #call-to-action close -->
+
+<!-- 
+Contact start
+==================== -->
+<!-- <section id="contact" class="section contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="block">
+					<div class="heading wow fadeInUp">
+						<h2>Get In Touch</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et <br> dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 wow fadeInUp" data-wow-delay="0.3s">
+				<div class="form-group">
+					<form action="#" method="post" id="contact-form">
+						<div class="input-field">
+							<input type="text" class="form-control" placeholder="Your Name" name="name">
+						</div>
+						<div class="input-field">
+							<input type="email" class="form-control" placeholder="Email Address" name="email">
+						</div>
+						<div class="input-field">
+							<textarea class="form-control" placeholder="Your Message" rows="3" name="message"></textarea>
+						</div>
+						<button class="btn btn-send" type="submit">Send me</button>
+					</form>
+
+					<div id="success">
+						<p>Your Message was sent successfully</p>
+					</div>
+					<div id="error">
+						<p>Your Message was not sent successfully</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>  -->
+
+<section clas="wow fadeInUp">
+	<div class="map-wrapper">
+	</div>
+</section>
+
+<footer>
+	<div class="container" id="contact">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<p>本网站由星云链提供区块链服务支持.欢迎通过邮件与我联系：17780487248@163.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+					<section>
+						<div class="modal-body modal-spa">
+							<div class="writ", id="newWindow1">
+								<h4></h4>
+							</div>
+						</div>
+					</section>
+			</div>
+		</div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+					<section>
+						<div class="modal-body modal-spa">
+							<div class="writ", id="newWindow2">
+								<h4></h4>
+							</div>
+						</div>
+					</section>
+			</div>
+		</div>
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+					<section>
+						<div class="modal-body modal-spa">
+							<div class="writ", id="newWindow3">
+								<h4></h4>
+							</div>
+						</div>
+					</section>
+			</div>
+		</div>
+</div>
+
+<!-- Js -->
+<script src="js/vendor/jquery-2.1.1.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="js/jquery.lwtCountdown-1.0.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/wow.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script> -->
+<script src="js/main.js"></script>
+<script src="lib/nebulas.js"></script>
+<script src="lib/nebPay.js"></script>
+<script>
+	'use strict';
+	var Neb = require("nebulas").Neb;
+	var HttpRequest = require("nebulas").HttpRequest
+	var NebPay = require("nebpay");
+	var nebPay = new NebPay(); 
+	var Account = require("nebulas").Account;
+	var contractAddress = "n1kyNHRLbZp4Aa2SkUMdjkfJtFB9Vi58bs6";
+	var intervalQuery;
+
+	var neb = new Neb();
+	var chainId = 1;
+	var netWork = "https://mainnet.nebulas.io"
+	//var chainId = 1001;
+	//var netWork = "https://testnet.nebulas.io"
+	neb.setRequest(new HttpRequest(netWork));
+
+	function search() {
+		neb.api.call({
+			chainID: chainId,
+			from: contractAddress,
+			to: contractAddress,
+			value: 0,
+			nonce: 0,
+			gasPrice: 1000000,
+			gasLimit: 2000000,
+			contract: {
+				function: "search",
+				args: JSON.stringify([]),
+			}
+		}).then(function (resp) {
+			console.log(resp)
+			var data = JSON.parse(resp.result);
+			if(data){
+				document.getElementById("ratio").innerText = data.ratio,
+				document.getElementById("reRatio").innerText = (1/data.ratio).toFixed(3),
+				document.getElementById("nasCount").innerText = data.inNAS,
+				document.getElementById("cnytCount").innerText = data.outCNYT
+			}
+			console.log(data)
+		}).catch(function(err) {
+			console.log(err);
+		})
+	}
+
+	function getCNYT() {
+		var value = document.getElementById("outCNYT").value.trim();
+		if(value === ""){
+			alert("请先输入您要兑换的NAS数量")
+		} else {
+			var value = parseFloat(value);
+			if (isNaN(value)){
+				alert("您填入的数额不正确，请检查！")
+			} else {
+				console.log(value)
+				var options = {
+					listener: function (resp) {
+						intervalQuery = setInterval(function() {
+							funcIntervalQuery(resp.txhash);
+						}, 5000);
+					}
+				}
+				//发送交易(发起智能合约调用)
+				nebPay.pay(contractAddress, value, options);
+			}
+		}
+	}
+
+	function getNAS(){
+		var nasValue = document.getElementById("inNAS").value.trim();
+		if(nasValue === ""){
+			alert("请先输入您要兑换的CNYT数量")
+		} else {
+			var nasValue = parseFloat(nasValue);
+			if (isNaN(nasValue)){
+				alert("您填入的数额不正确，请检查！")
+			} else {
+				console.log(nasValue)
+				var value = 0;
+				var to = contractAddress;
+                var callFunction = "exchange";
+                var callArgs =  JSON.stringify([nasValue]);
+                var options = {
+                    listener: function (resp) {
+                        intervalQuery = setInterval(function() {
+                            funcIntervalQuery(resp.txhash);
+                        }, 5000);
+                    }
+                }
+                //发送交易(发起智能合约调用)
+                nebPay.call(to, value, callFunction, callArgs, options);
+			}
+		}
+	}
+	
+	function funcIntervalQuery(txhash) {
+		newWindow.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
+		newWindow1.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
+		receiptTransaction(txhash).then(function(resp){
+			var respObject = resp;
+			console.log(respObject)
+			if (respObject.status == 1){
+				clearInterval(intervalQuery);
+				newWindow.innerHTML = `<h4>执行成功!</h4>`
+				newWindow1.innerHTML = `<h4>应用添加成功!</h4>`
+				//location.reload();
+				var address = resp.from;
+				console.log(address)
+				login = true;
+				//localStorage.setItem("login", true)
+				localStorage.setItem("userAddress", address)
+				setTimeout(window.location.href="user.html", 3000)
+			} else if (respObject.status == 0) {
+				newWindow.innerHTML = `
+				<h4>啊哦，好像哪里出错了！</h4>
+				<h4>您可以根据以下哈希，再次确认您的交易状态:</h4>
+				<div class="hash">
+					<p>${txhash}</p>
+				</div>`
+			}
+		}).catch(function(err){
+			newWindow.innerHTML = `
+			<h4>啊哦，好像哪里出错了！</h4>
+			<h4>您可以根据以下哈希，再次确认您的交易状态:</h4>
+				<div class="hash">
+					<p>${txhash}</p>
+				</div>`
+		})
+	}
+	
+	var receiptTransaction = function(txhash) {
+		var promise = new Promise(function(resolve, reject){
+			neb.api.getTransactionReceipt(txhash).then(function (resp) {
+				resolve(resp);
+			}).catch(function(err) {
+				console.log(err);
+			});
+		});
+		return promise
+	}
+
+</script>
+
+</body>
+</html>
