@@ -247,13 +247,15 @@ Service start
 						<div class="input-group">
 						  <input id="outCNYT" type="text" class="form-control" placeholder="请输入您要兑换的NAS数量">
 						  <span class="input-group-btn">
-							<button class="btn btn-default btn-subscription" type="button", onclick="getCNYT();">NAS兑换CNYT</button>
+							<button class="btn btn-default btn-subscription" type="button" onclick="getCNYT();">NAS兑换CNYT</button>
+							<button id="n2c" type="button" data-toggle="modal" data-target="#myModal1" style="display: none"></button>
 						  </span>
 						</div>
 						<div class="input-group">
 							<input id="inNAS" type="text" class="form-control" placeholder="请输入您要兑换的CNYT数量">
 							<span class="input-group-btn">
-								<button class="btn btn-default btn-subscription" type="button", onclick="getNAS();">CNYT兑换NAS</button>
+								<button class="btn btn-default btn-subscription" type="button" data-toggle="modal" data-target="#myModal2" onclick="getNAS();">CNYT兑换NAS</button>
+								<button id="c2n" type="button" data-toggle="modal" data-target="#myModal2" style="display: none"></button>
 							</span>
 						</div>
 					</div>
@@ -332,7 +334,7 @@ Contact start
 					<section>
 						<div class="modal-body modal-spa">
 							<div class="writ", id="newWindow1">
-								<h4></h4>
+								<h4>请到浏览器插件中完成操作</h4>
 							</div>
 						</div>
 					</section>
@@ -348,23 +350,7 @@ Contact start
 					<section>
 						<div class="modal-body modal-spa">
 							<div class="writ", id="newWindow2">
-								<h4></h4>
-							</div>
-						</div>
-					</section>
-			</div>
-		</div>
-</div>
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-				</div>
-					<section>
-						<div class="modal-body modal-spa">
-							<div class="writ", id="newWindow3">
-								<h4></h4>
+								<h4>请到浏览器插件中完成操作</h4>
 							</div>
 						</div>
 					</section>
@@ -423,8 +409,8 @@ Contact start
 			if(data){
 				document.getElementById("ratio").innerText = data.ratio,
 				document.getElementById("reRatio").innerText = (1/data.ratio).toFixed(3),
-				document.getElementById("nasCount").innerText = data.inNAS,
-				document.getElementById("cnytCount").innerText = data.outCNYT
+				document.getElementById("nasCount").innerText = data.inNAS/1e18,
+				document.getElementById("cnytCount").innerText = data.outCNYT/1e18
 			}
 			console.log(data)
 		}).catch(function(err) {
@@ -451,6 +437,7 @@ Contact start
 				}
 				//发送交易(发起智能合约调用)
 				nebPay.pay(contractAddress, value, options);
+				document.getElementById("n2c").click()
 			}
 		}
 	}
@@ -477,12 +464,15 @@ Contact start
                     }
                 }
                 //发送交易(发起智能合约调用)
-                nebPay.call(to, value, callFunction, callArgs, options);
+				nebPay.call(to, value, callFunction, callArgs, options);
+				document.getElementById("c2n").click()
 			}
 		}
 	}
 	
 	function funcIntervalQuery(txhash) {
+		var newWindow = document.getElementById("newWindow1")
+		var newWindow1 = document.getElementById("newWindow2")
 		newWindow.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
 		newWindow1.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
 		receiptTransaction(txhash).then(function(resp){
@@ -490,8 +480,8 @@ Contact start
 			console.log(respObject)
 			if (respObject.status == 1){
 				clearInterval(intervalQuery);
-				newWindow.innerHTML = `<h4>执行成功!</h4>`
-				newWindow1.innerHTML = `<h4>应用添加成功!</h4>`
+				newWindow.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>`
+				newWindow1.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>`
 				//location.reload();
 				var address = resp.from;
 				console.log(address)
