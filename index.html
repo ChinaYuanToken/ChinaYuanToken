@@ -409,8 +409,8 @@ Contact start
 			if(data){
 				document.getElementById("ratio").innerText = data.ratio,
 				document.getElementById("reRatio").innerText = (1/data.ratio).toFixed(3),
-				document.getElementById("nasCount").innerText = (data.inNAS/1e18).toFixed(3),
-				document.getElementById("cnytCount").innerText = (data.outCNYT/1e18).toFixed(3)
+				document.getElementById("nasCount").innerText = (data.inNAS/1e18).toFixed(1),
+				document.getElementById("cnytCount").innerText = (data.outCNYT/1e18).toFixed(1)
 			}
 			console.log(data)
 		}).catch(function(err) {
@@ -490,7 +490,7 @@ Contact start
 					</div>
 					<div class="col-sm-6">
 						<form>
-						<button class="subbtn" onclick="location.reload()">留在本页</button>
+						<button class="subbtn" onclick="window.location.reload()">留在本页</button>
 						</form>
 					</div>
 				</div>`
@@ -503,7 +503,7 @@ Contact start
 					</div>
 					<div class="col-sm-6">
 						<form>
-						<button class="subbtn" onclick="location.reload()">留在本页</button>
+							<button class="subbtn" onclick="window.location.reload()">留在本页</button>
 						</form>
 					</div>
 				</div>`
