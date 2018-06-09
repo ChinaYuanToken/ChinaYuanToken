@@ -341,22 +341,6 @@ Contact start
 			</div>
 		</div>
 </div>
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-				</div>
-					<section>
-						<div class="modal-body modal-spa">
-							<div class="writ", id="newWindow2">
-								<h4>请到浏览器插件中完成操作</h4>
-							</div>
-						</div>
-					</section>
-			</div>
-		</div>
-</div>
 
 <!-- Js -->
 <script src="js/vendor/jquery-2.1.1.min.js"></script>
@@ -473,39 +457,15 @@ Contact start
 	
 	function funcIntervalQuery(txhash) {
 		var newWindow = document.getElementById("newWindow1")
-		var newWindow1 = document.getElementById("newWindow2")
 		newWindow.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
-		newWindow1.innerHTML = `<h4>正在查询结果，请稍等...</h4>`
 		receiptTransaction(txhash).then(function(resp){
 			var respObject = resp;
 			console.log(respObject)
 			if (respObject.status == 1){
 				clearInterval(intervalQuery);
 				newWindow.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>
-				<div class="sub-bn form-group">
-					<div class="col-sm-6">
-						<form>
-							<button class="subbtn" onclick="function(){ location.reload();window.open('http://nasTokenWallet.com')}">前往钱包</button>
-						</form>
-					</div>
-					<div class="col-sm-6">
-						<form>
-						<button class="subbtn" onclick="function(){ location.reload())}">留在本页</button>
-						</form>
-					</div>
-				</div>`
-				newWindow1.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>
-				<div class="sub-bn form-group">
-					<div class="col-sm-6">
-						<form>
-							<button class="subbtn" onclick="function(){ location.reload();window.open('http://nasTokenWallet.com')}">前往钱包</button>
-						</form>
-					</div>
-					<div class="col-sm-6">
-						<form>
-							<button class="subbtn" onclick="function(){ location.reload())}">留在本页</button>
-						</form>
-					</div>
+				<div class="sub-bn form-group">	
+					<button class="subbtn btn-block" onclick="function(){ location.reload();window.open('http://nasTokenWallet.com')}">前往钱包</button>
 				</div>`
 			} else if (respObject.status == 0) {
 				newWindow.innerHTML = `
