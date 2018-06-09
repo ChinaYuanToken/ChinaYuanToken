@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>CNYT</title>
+<title>CNYT-稳定数字货币</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -463,10 +463,7 @@ Contact start
 			console.log(respObject)
 			if (respObject.status == 1){
 				clearInterval(intervalQuery);
-				newWindow.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>
-				<div class="sub-bn form-group">	
-					<button class="subbtn btn-block" onclick="function(){ location.reload();window.open('http://nasTokenWallet.com')}">前往钱包</button>
-				</div>`
+				newWindow.innerHTML = `<h4>兑换成功!推荐使用星云代币钱包查询和转账</h4>`
 			} else if (respObject.status == 0) {
 				newWindow.innerHTML = `
 				<h4>啊哦，好像哪里出错了！</h4>
