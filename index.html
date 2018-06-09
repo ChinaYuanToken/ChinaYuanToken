@@ -146,7 +146,7 @@ About start
 					<p>3.在使用NAS进行兑换期间，NAS价格会每天更新，NAS价格以官方浏览器价格为准。</p>
 					<p>4.在使用NAS进行兑换期间，您兑换的NAS数量不能超过合约中NAS数量，请注意风险。</p>
 					<p>5.CNYT是星云链上的NRC20协议代币，因此进行兑换操作需要使用<a href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云浏览器插件</a></p>
-					<p>6.推荐使用获奖作品<a href="http://nastokenwallet.com/">星云代币钱包</a>进行CNYT的查询和转账交易</p>
+					<p>6.推荐使用获奖作品<a href="http://nastokenwallet.com/">星云代币钱包</a>进行CNYT的查询和转账交易<br>代币地址：n1kyNHRLbZp4Aa2SkUMdjkfJtFB9Vi58bs6</p>
 					<p>7.如果您在使用过程中有任何问题，欢迎通过邮箱与我取得联系：17780487248@163.com</p>
 				</div>
 			</div>
@@ -480,15 +480,33 @@ Contact start
 			console.log(respObject)
 			if (respObject.status == 1){
 				clearInterval(intervalQuery);
-				newWindow.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>`
-				newWindow1.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>`
-				//location.reload();
-				var address = resp.from;
-				console.log(address)
-				login = true;
-				//localStorage.setItem("login", true)
-				localStorage.setItem("userAddress", address)
-				setTimeout(window.location.href="user.html", 3000)
+				newWindow.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>
+				<div class="sub-bn form-group">
+					<div class="col-sm-6">
+						<form>
+							<button class="subbtn" onclick="window.open('http://nasTokenWallet.com')">前往钱包</button>
+						</form>
+					</div>
+					<div class="col-sm-6">
+						<form>
+						<button class="subbtn">留在本页</button>
+						</form>
+					</div>
+				</div>`
+				newWindow1.innerHTML = `<h4>执行成功!推荐到代币钱包中查询您的余额</h4>
+				<div class="sub-bn form-group">
+					<div class="col-sm-6">
+						<form>
+							<button class="subbtn" onclick="window.open('http://nasTokenWallet.com')">前往钱包</button>
+						</form>
+					</div>
+					<div class="col-sm-6">
+						<form>
+						<button class="subbtn">留在本页</button>
+						</form>
+					</div>
+				</div>`
+				setTimeout(location.reload(), 5000)
 			} else if (respObject.status == 0) {
 				newWindow.innerHTML = `
 				<h4>啊哦，好像哪里出错了！</h4>
