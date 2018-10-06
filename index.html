@@ -435,7 +435,7 @@ Contact start
 			if (isNaN(nasValue)){
 				alert("您填入的数额不正确，请检查！")
 			} else {
-				var nasValue = nasValue * 1e18
+				var nasValue = new Number(nasValue * 1e18)
 				console.log(nasValue)
 				var value = 0;
 				var to = contractAddress;
